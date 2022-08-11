@@ -31,22 +31,16 @@ export const Card = ({ index, name }) => {
                 />
 
             <div className="descricao">
-                <h2> {name} </h2>                    
-                <p>
+                <h2> {name} </h2>   
                     {
                         details.abilities !== undefined ? 
                             details.abilities.map(
                                 ability => (
-                                    <p>{ability}</p>
+                                    <p key={ability.slot}>{ability}</p>
                                 )
                             )
                         : ''
                     }
-                </p>
-                <p>
-
-                </p>
-
             </div>
         </div>
     )
